@@ -2,24 +2,24 @@
 
 A full-stack investment analysis application that processes CIM (Confidential Information Memorandum) PDFs using AI to extract investment insights. Features user authentication, file upload/analysis, and a dashboard for managing past analyses.
 
-## 🚀 Recent Improvements
+##  Recent Improvements
 
-### ✅ Authentication System
+###  Authentication System
 - **Proper Clerk JWT Validation**: Replaced temporary authentication bypass with proper Clerk JWT verification
 - **Backward Compatibility**: Maintains support for custom JWT tokens
 - **Secure Token Handling**: Validates tokens against Clerk's JWKS endpoint
 
-### ✅ Persistent Ratings & Confidence
+###  Persistent Ratings & Confidence
 - **Database Storage**: User ratings and confidence scores now persist in the database
 - **API Endpoints**: New PUT endpoints for updating ratings and confidence
 - **Frontend Integration**: Real-time updates with proper error handling
 
-### ✅ Enhanced Database Schema
+###  Enhanced Database Schema
 - **User Model**: Updated to support Clerk string IDs
 - **Analysis Results**: Added `user_rating` and `confidence_score` fields
 - **Migration Script**: Automated database migration for existing installations
 
-## 🛠 Technical Stack
+##  Technical Stack
 
 - **Backend**: FastAPI (Python) with SQLAlchemy ORM
 - **Frontend**: React with Clerk authentication
@@ -28,7 +28,7 @@ A full-stack investment analysis application that processes CIM (Confidential In
 - **Storage**: Amazon S3 for PDF files
 - **Authentication**: Clerk (JWT-based) with backward compatibility
 
-## 📋 Key Features
+##  Key Features
 
 ### 1. Authentication System
 - Clerk integration with proper JWT validation
@@ -52,7 +52,7 @@ A full-stack investment analysis application that processes CIM (Confidential In
 - Confidence scoring for each analysis section
 - Detailed view with navigation between analyses
 
-## 🗄 Database Schema
+##  Database Schema
 
 ```sql
 -- Users table (supports both Clerk and custom auth)
@@ -74,7 +74,7 @@ analysis_results:
 - confidence_score (Float, nullable) - 0-1 confidence scale
 ```
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Python 3.8+
@@ -135,7 +135,7 @@ analysis_results:
    npm start
    ```
 
-## 🔧 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /api/register` - User registration
@@ -150,14 +150,14 @@ analysis_results:
 - `PUT /api/results/{id}/rating` - Update user rating (1-5 scale)
 - `PUT /api/results/{id}/confidence` - Update confidence score (0-1 scale)
 
-## 🔐 Authentication Flow
+##  Authentication Flow
 
 1. **Clerk Integration**: Frontend uses Clerk's `getToken()` to obtain JWT
 2. **Token Validation**: Backend validates against Clerk's JWKS endpoint
 3. **Fallback Support**: Custom JWT tokens still supported for backward compatibility
 4. **User Creation**: Automatic user creation for new Clerk users
 
-## 📊 Analysis Output Format
+##  Analysis Output Format
 
 The AI analysis returns structured JSON with:
 - **Company Info**: Name, description, industry
@@ -166,7 +166,7 @@ The AI analysis returns structured JSON with:
 - **Red Flags**: Risks and concerns
 - **Confidence Scoring**: Per-section confidence levels
 
-## 🎯 Usage Workflow
+##  Usage Workflow
 
 1. **Authentication**: Users sign in via Clerk
 2. **Upload**: Drag-and-drop PDF files for analysis
@@ -174,7 +174,7 @@ The AI analysis returns structured JSON with:
 4. **Review**: View structured results with ratings and confidence
 5. **Management**: Organize and delete analyses as needed
 
-## 🔧 Development Notes
+##  Development Notes
 
 ### Database Migrations
 - Run `python migrate_database.py` to add new columns
@@ -191,13 +191,13 @@ The AI analysis returns structured JSON with:
 - Real-time updates with optimistic UI
 - Proper error handling and user feedback
 
-## 🚨 Known Limitations
+##  Known Limitations
 
 - Email validation temporarily disabled (requires MailboxLayer API key)
 - Some older database installations may need manual migration
 - Confidence scores are stored as 0-1 but displayed as 0-100%
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 1. **Email Validation**: Re-enable with proper API key
 2. **Advanced Filtering**: Search and filter by company, date, rating
@@ -205,11 +205,11 @@ The AI analysis returns structured JSON with:
 4. **Collaboration**: Share analyses with team members
 5. **Advanced Analytics**: Trend analysis and insights dashboard
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
