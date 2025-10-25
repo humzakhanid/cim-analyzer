@@ -1,0 +1,29 @@
+<!-- static/frontend.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Chat App</title>
+</head>
+<body>
+  <h2>Upload a PDF</h2>
+  <form id="upload-form" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".pdf" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    document.getElementById('upload-form').onsubmit = async (e) => {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: form
+      });
+      const data = await res.json();
+      document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+    };
+  </script>
+</body>
+</html>
