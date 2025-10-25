@@ -2,7 +2,7 @@
 
 A full-stack investment analysis application that processes CIM (Confidential Information Memorandum) PDFs using AI to extract investment insights. Features user authentication, file upload/analysis, and a dashboard for managing past analyses.
 
-## ⚠️ Prototype Notice
+##  Prototype Notice
 
 **This is a prototype version** that demonstrates the core technical functionality of CIM analysis and AI-powered insights. While it includes the main features for reading and analyzing CIMs, it does not include full enterprise functionality such as:
 
@@ -13,7 +13,7 @@ A full-stack investment analysis application that processes CIM (Confidential In
 
 For the complete enterprise version with full collaboration and team features, please contact **humzakhanid@gmail.com** for licensing and deployment options.
 
-## 🚀 Recent Improvements
+##  Recent Improvements
 
 ###  Authentication System
 - **Proper Clerk JWT Validation**: Replaced temporary authentication bypass with proper Clerk JWT verification
