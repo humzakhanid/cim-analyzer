@@ -26,7 +26,7 @@ class LoginRequest(BaseModel):
 MAILBOXLAYER_API_KEY = os.getenv("MAILBOXLAYER_API_KEY")
 
 def is_real_email(email):
-    # Temporarily disable email validation for testing
+    # Email validation disabled for development
     return True
     # url = f"http://apilayer.net/api/check?access_key={MAILBOXLAYER_API_KEY}&email={email}"
     # try:

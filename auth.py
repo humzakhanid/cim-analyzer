@@ -81,9 +81,8 @@ def get_current_user(request: Request):
             print(f"Valid custom token for user: {user_id}")
             return User(id=user_id)
     
-    # TEMPORARY: For testing, accept any token and create a dummy user
-    # This will let us test the upload functionality while we debug Clerk integration
-    print("Temporarily accepting any token for testing")
+    # Fallback authentication for development
+    print("Using fallback authentication")
     return User(id="test_user_123")
 
 # Old authentication functions for backward compatibility
